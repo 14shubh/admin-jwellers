@@ -1,0 +1,25 @@
+<div class="container-fluid add-category">
+    <div class="bg-image">
+        <h1>ADD-CATEGORY</h1>
+    </div>
+
+    <ul class="box-info">
+        <li>
+            <form class="form-box">
+                <div class="category-name form-group">
+                    <label for="categoryName" class="form-label">CategoryName</label>
+                    <!-- <input name="categoryName" [(ngModel)]="categoryName" class="form-control" type="text"> -->
+                    <input type="text" class="form-control cat-name" [(ngModel)]="categoryName" name="categoryName "/>
+                </div>
+
+                    <div class="category_image">
+                        <label class="form-label" for="categoryImage">Category Image</label>
+                        <input (change)="select($event)" type="file" class="form-control" name="categoryImage" id="">
+                    </div>
+
+                <a (click)="upload()" class="btn btn-primary">Save Category</a>
+
+            </form>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,40 @@
+
+.form-box{
+    padding: 50px 80px;
+    height: 350px;
+    max-width: 550px;
+    box-shadow: 0 0 5px rgb(179, 179, 179);
+    margin: auto;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.bg-image h1{
+    text-align: center;
+}
+.box-info{
+    margin-top: 50px;
+}
+.box-info li{
+    list-style: none;
+}
+.category-name label, .category_image label{
+    font-size: 18px;
+    font-weight: 500;
+}
+.category-name input, .category_image input{
+    box-shadow: 0 0 2px rgba(111, 111, 111, 0.8);
+}
+
+/* .form-control{
+    padding: 30px 50px;
+} */
+.category_image{
+    margin-top: 30px;
+}
+.category_image input{
+    margin: 10px 0 50px 0;
+}

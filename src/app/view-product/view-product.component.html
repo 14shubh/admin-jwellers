@@ -1,0 +1,40 @@
+
+
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th>S.no</th>
+            <th>ProductName</th>
+            <th>ProductImage</th>
+            <th>ProductPrice</th>
+            <th>description</th>
+            <th>CategoryType</th>
+            <th>Discount</th>
+            <th>Quantity</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr class="table-row" *ngFor="let item of productList index as i">
+            <td class="sno"><span>{{i+1}}</span></td>
+            <td>{{item.productName}}</td>
+    
+            <td><img [src]="item.productImage" alt=""></td>
+    
+            <td>{{item.productPrice}}</td>
+    
+            <td>{{item.description}}</td>
+    
+            <td>{{item.categoryId.categoryName}}</td>
+    
+            <td>{{item.discount}}</td>
+    
+            <td>{{item.quantity}}</td>
+    
+            <td><button (click)="updateCategory(productList[i])" class="btn btn-warning">Edit</button></td>
+    
+            <td><button (click)="deleteProduct(item._id,i)" class="btn btn-danger">Delete</button></td>
+        </tr>
+    </tbody>
+  </table>

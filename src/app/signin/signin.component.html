@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="form-box">
+      <form action="#" class="form">
+        <div class="logo">
+  
+            <img src="../../assets/images/logo.png" alt="Logo">
+        </div>
+  
+        <div class="form-group">
+          <i class="fas fa-mail-bulk    "></i>
+          <input required #user="ngModel" [(ngModel)]="email" type="email" name="email" placeholder="Email"  autocomplete="off">
+        </div>
+        <span class="text-danger" *ngIf="user.errors?.['required'] && user.touched">Please enter email</span>
+  
+        <div class="form-group">
+          <i class="fa fa-lock" aria-hidden="true"></i>
+          <input required #pass="ngModel" [(ngModel)]="password" type="password" name="password" placeholder="Password" autocomplete="off">
+        </div>
+        <span class="text-danger" *ngIf="pass.errors?.['required'] && pass.touched">Please enter password</span>
+        
+        <div class="links">
+          <span>New User ? <a class="already" href="sign-up">Sign Up</a></span>
+          <a routerLink="forget" class="forget">Forget Password</a>
+        </div>
+  
+        <div class="form-group signbtn">
+          <a  class="btn btn-primary signin" disabled="user.Invalid || pass.Invalid" (click)="signin()">Sign In</a>
+        </div>    
+  
+      </form>
+    </div>
+  </div>
+  
